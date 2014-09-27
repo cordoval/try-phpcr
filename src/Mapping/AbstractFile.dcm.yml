@@ -1,0 +1,17 @@
+Cordoval\Document\AbstractFile
+
+/**
+ * @PHPCRODM\MappedSuperclass(mixins="mix:created")
+ */
+
+     /** @PHPCRODM\Id(strategy="parent") */
+
+        /** @PHPCRODM\Node */
+
+           /** @PHPCRODM\Nodename */
+
+              /** @PHPCRODM\ParentDocument */
+
+                 /** @PHPCRODM\Date(property="jcr:created") */
+
+                    /** @PHPCRODM\String(property="jcr:createdBy") */
