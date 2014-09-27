@@ -1,0 +1,22 @@
+{
+    "name": "cordoval/try-phpcr",
+    "authors": [
+        {
+            "name": "Luis Cordova",
+            "email": "cordoval@gmail.com"
+        }
+    ],
+    "require": {
+        "doctrine/phpcr-odm": "~1.2@dev",
+        "jackalope/jackalope-doctrine-dbal": "~1.2@dev",
+        "phpcr/phpcr-utils": "~1.2@dev"
+    },
+    "require-dev": {
+        "doctrine/phpcr-bundle": "~1.2@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cordoval\\": "src/"
+        }
+    }
+}
