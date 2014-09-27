@@ -3,6 +3,7 @@
 namespace Cordoval\Document;
 
 use Doctrine\ODM\PHPCR\HierarchyInterface;
+use Exception;
 
 abstract class AbstractFile implements HierarchyInterface
 {
@@ -62,5 +63,15 @@ abstract class AbstractFile implements HierarchyInterface
     public function __toString()
     {
         return (string) $this->nodename;
+    }
+
+    public function getParent()
+    {
+        throw new Exception('do not use this method');
+    }
+
+    public function setParent($parent)
+    {
+        throw new Exception('do not use this method');
     }
 }

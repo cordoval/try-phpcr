@@ -3,84 +3,24 @@
 namespace Cordoval\Document;
 
 use Doctrine\ODM\PHPCR\Exception\BadMethodCallException;
-use PHPCR\NodeInterface;
 
-/**
- * This class represents a jcr nt:resource and is used by the File document
- *
- * @see http://wiki.apache.org/jackrabbit/nt:resource
- *
- * @PHPCRODM\Document(nodeType="nt:resource")
- */
 class Resource
 {
-    /**
-     * @PHPCRODM\Id
-     */
     protected $id;
-
-    /**
-     * @var NodeInterface
-     *
-     * @PHPCRODM\Node
-     */
     protected $node;
-
-    /**
-     * @PHPCRODM\Nodename
-     */
     protected $nodename;
-
-    /**
-     * @PHPCRODM\ParentDocument
-     */
     protected $parent;
-
-    /**
-     * @PHPCRODM\Binary(property="jcr:data")
-     */
     protected $data;
-
-    /**
-     * @PHPCRODM\String(property="jcr:mimeType")
-     */
     protected $mimeType = 'application/octet-stream';
-
-    /**
-     * @PHPCRODM\String(property="jcr:encoding", nullable=true)
-     */
     protected $encoding;
-
-    /**
-     * @PHPCRODM\Date(property="jcr:lastModified")
-     */
     protected $lastModified;
-
-    /**
-     * @PHPCRODM\String(property="jcr:lastModifiedBy")
-     */
     protected $lastModifiedBy;
 
-    /**
-     * The node name of the file.
-     *
-     * @return string
-     */
     public function getNodename()
     {
         return $this->nodename;
     }
 
-    /**
-     * Set the node name of the resource.
-     *
-     * Only mutable on new document before the persist. For an nt:file resource
-     * child, this must be "jcr:content".
-     *
-     * @param string $name the name of the resource
-     *
-     * @return $this
-     */
     public function setNodename($name)
     {
         $this->nodename = $name;
@@ -88,33 +28,16 @@ class Resource
         return $this;
     }
 
-    /**
-     * The parent File document of this Resource document.
-     *
-     * @return object File document that is the parent of this node.
-     */
     public function getParentDocument()
     {
         return $this->parent;
     }
 
-    /**
-     * Kept for BC
-     *
-     * @deprecated use getParentDocument instead.
-     */
     public function getParent()
     {
         return $this->getParentDocument();
     }
 
-    /**
-     * Set the parent document of this resource.
-     *
-     * @param object $parent Document that is the parent of this node.
-     *
-     * @return $this
-     */
     public function setParentDocument($parent)
     {
         $this->parent = $parent;
@@ -122,24 +45,11 @@ class Resource
         return $this;
     }
 
-
-    /**
-     * Kept for BC
-     *
-     * @deprecated use setParentDocument instead.
-     */
     public function setParent($parent)
     {
         return $this->setParentDocument($parent);
     }
 
-    /**
-     * Set the data from a binary stream.
-     *
-     * @param stream $data the contents of this resource
-     *
-     * @return $this
-     */
     public function setData($data)
     {
         $this->data = $data;
@@ -147,11 +57,6 @@ class Resource
         return $this;
     }
 
-    /**
-     * Get the binary data stream of this resource.
-     *
-     * @param stream
-     */
     public function getData()
     {
         return $this->data;

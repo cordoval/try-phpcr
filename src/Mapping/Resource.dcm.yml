@@ -1,0 +1,45 @@
+/**
+ * This class represents a jcr nt:resource and is used by the File document
+ *
+ * @see http://wiki.apache.org/jackrabbit/nt:resource
+ *
+ * @PHPCRODM\Document(nodeType="nt:resource")
+ */
+
+     /**
+      * @PHPCRODM\Id
+      */
+
+
+    /**
+     * @var NodeInterface
+     *
+     * @PHPCRODM\Node
+     */
+         /**
+          * @PHPCRODM\Nodename
+          */
+
+    /**
+     * @PHPCRODM\ParentDocument
+     */
+
+         /**
+          * @PHPCRODM\Binary(property="jcr:data")
+          */
+
+              /**
+               * @PHPCRODM\String(property="jcr:mimeType")
+               */
+
+                   /**
+                    * @PHPCRODM\String(property="jcr:encoding", nullable=true)
+                    */
+
+                        /**
+                         * @PHPCRODM\Date(property="jcr:lastModified")
+                         */
+
+                             /**
+                              * @PHPCRODM\String(property="jcr:lastModifiedBy")
+                              */
