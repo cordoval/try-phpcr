@@ -1,11 +1,10 @@
-/**
- * This class represents a JCR file, aka nt:file.
- * @see http://wiki.apache.org/jackrabbit/nt:file
- *
- * @PHPCRODM\Document(nodeType="nt:file", mixins={}, referenceable=true)
- */
-
-     /**
-      * @var Resource
-      * @PHPCRODM\Child(nodeName="jcr:content", cascade="all")
-      */
+Cordoval\Document\AbstractFile:
+    type: document
+    nodeType: nt:file
+    mixins:
+        mix: created
+        referebceable: true
+    fields:
+        child:
+            nodeName: jcr:content
+            cascade: all

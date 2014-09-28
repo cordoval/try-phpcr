@@ -1,17 +1,20 @@
-Cordoval\Document\AbstractFile
+Cordoval\Document\AbstractFile:
+    type: mappedSuperclass
+    mixins:
+        mix: created
+    fields:
+        id:
+            strategy: parent
 
-/**
- * @PHPCRODM\MappedSuperclass(mixins="mix:created")
- */
-
-     /** @PHPCRODM\Id(strategy="parent") */
-
-        /** @PHPCRODM\Node */
-
-           /** @PHPCRODM\Nodename */
-
-              /** @PHPCRODM\ParentDocument */
-
-                 /** @PHPCRODM\Date(property="jcr:created") */
-
-                    /** @PHPCRODM\String(property="jcr:createdBy") */
+        node:
+            type: node
+        nodename:
+            type: nodename
+        parent:
+            type: parentDocument
+        createdAt:
+            type: date
+            property: jcr:created
+        createdBy:
+            type: string
+            property: jcr:createdBy
