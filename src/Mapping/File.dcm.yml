@@ -1,4 +1,4 @@
-Cordoval\Document\AbstractFile:
+Doctrine\ODM\PHPCR\Document\AbstractFile:
     type: document
     nodeType: nt:file
     mixins:

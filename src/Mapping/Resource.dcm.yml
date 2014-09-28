@@ -1,8 +1,6 @@
-/**
- * This class represents a jcr nt:resource and is used by the File document
- *
- * @see http://wiki.apache.org/jackrabbit/nt:resource
- *
+Doctrine\ODM\PHPCR\Document\Resource:
+
+
  * @PHPCRODM\Document(nodeType="nt:resource")
  */
 

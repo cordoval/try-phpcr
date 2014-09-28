@@ -1,26 +1,17 @@
-/**
- * This class represents an arbitrary node
- *
- * It is used as a default document, for example with the ParentDocument annotation.
- * You can not use this to create nodes as it has no type annotation.
- *
- * @PHPCRODM\Document()
- */
-
- /** @PHPCRODM\Id(strategy="parent") */
-
-    /** @PHPCRODM\Node */
-
-    /** @PHPCRODM\Nodename */
-
-    /** @PHPCRODM\ParentDocument */
-
-        /**
-         * @var ArrayCollection
-         * @PHPCRODM\Children
-         */
-
-         /**
-              * @var ArrayCollection
-              * @PHPCRODM\MixedReferrers
-              */
+Doctrine\ODM\PHPCR\Document\Generic:
+    type: document
+    nodeType: nt:file
+    mixins:
+    fields:
+        id:
+            strategy: parent
+        node:
+            type: node
+        nodename:
+            type: nodename
+        parent:
+            type: parentDocument
+        children:
+            type: children
+        x:
+            type: mixedreferrers

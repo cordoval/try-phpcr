@@ -1,13 +1,11 @@
-
- * @PHPCRODM\Document(nodeType="nt:folder", mixins={})
- */
-
-     /**
-      * @var ArrayCollection
-      * @PHPCRODM\Children(cascade="all")
-      */
-
-          /**
-           * @var AbstractFile
-           * @PHPCRODM\Child(cascade="all")
-           */
+Doctrine\ODM\PHPCR\Document\Folder:
+    type: document
+    nodeType: nt:folder
+    mixins: []
+    fields:
+        children:
+            type: children
+            cascade: all
+        child:
+            type: child
+            cascade: all
