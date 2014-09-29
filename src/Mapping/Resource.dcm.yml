@@ -1,39 +1,31 @@
 Doctrine\ODM\PHPCR\Document\Resource:
-
-
- * @PHPCRODM\Document(nodeType="nt:resource")
- */
-
-     /**
-      * @PHPCRODM\Id
-      */
-
-
-    /**
-     * @var NodeInterface
-     *
-     * @PHPCRODM\Node
-     */
-         /**
-          * @PHPCRODM\Nodename
-          */
-
-    /**
-     * @PHPCRODM\ParentDocument
-     */
-
-         /**
-          * @PHPCRODM\Binary(property="jcr:data")
-          */
-
-              /**
-               * @PHPCRODM\String(property="jcr:mimeType")
-               */
-
-                   /**
-                    * @PHPCRODM\String(property="jcr:encoding", nullable=true)
-                    */
-
+    type: document
+    nodeType: nt:resource
+    mixins:
+    fields:
+        id:
+            type: id
+        note:
+            type: node
+        nodename:
+            type: nodename
+        parent:
+            type: parentDocument
+        x:
+            type: binary
+            property: jcr:data
+        x:
+            type: string
+            property: jcr:mimeType
+        y:
+            type: string
+            property:
+                name: jcr:encoding
+                nullable: true
+        x:
+            type: date
+            property:
+                name: jcr:lastModified
                         /**
                          * @PHPCRODM\Date(property="jcr:lastModified")
                          */
