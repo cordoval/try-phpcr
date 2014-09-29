@@ -26,10 +26,6 @@ Doctrine\ODM\PHPCR\Document\Resource:
             type: date
             property:
                 name: jcr:lastModified
-                        /**
-                         * @PHPCRODM\Date(property="jcr:lastModified")
-                         */
-
-                             /**
-                              * @PHPCRODM\String(property="jcr:lastModifiedBy")
-                              */
+        z:
+            type: string
+            property: jcr:lastModifiedBy
